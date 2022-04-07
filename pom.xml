@@ -48,6 +48,17 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<!-- intégration de swagger -->
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>1.6.6</version>
+		</dependency>
+		<!--
+		ICI le port est le 8380 donc pour ouvrir swagger il faut utiliser le lien suivant
+		http://localhost:8380/swagger-ui.html
+		 -->
+		<!-- /intégration de swagger -->
 	</dependencies>
 
 	<build>
