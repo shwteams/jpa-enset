@@ -1,4 +1,7 @@
 # jpa-enset
+#UTILS
+Il faut utiliser ce lien pour avoir accès à swagger
+http://localhost:8080/swagger-ui.html
 
 WEBOGRAPHIE
 

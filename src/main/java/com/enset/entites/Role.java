@@ -17,7 +17,7 @@ public class Role {
     private String description;
     @Column(unique = true)
     private String roleName;
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.EAGER) //permet de charger les user du role en même temps que le role
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private List<User> users = new ArrayList<>();
 }

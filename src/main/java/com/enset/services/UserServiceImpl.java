@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
 import java.util.UUID;
 
 @Service
@@ -30,7 +31,9 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User findUserByUserName(String username) {
-        return userRepository.findByUserName(username);
+        User user = userRepository.findByUserName(username);
+
+        return user;
     }
 
     @Override
@@ -39,6 +42,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
+    @Transactional
     public void addRoleToUser(String userName, String roleName) {
         User user = this.findUserByUserName(userName);
         Role role = this.findRoleByRoleName(roleName);
